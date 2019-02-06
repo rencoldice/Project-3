@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>feb</title>
+    <link rel="stylesheet" href="style.css" type="text/css" >
+    <!--<link href="https://fonts.googleapis.com/css?family=Cinzel|Poiret+One" rel="stylesheet">-->
+    <!--<link href="https://fonts.googleapis.com/css?family=Cinzel|Cinzel+Decorative|Monoton|Playfair+Display|Sacramento" rel="stylesheet">-->
+    <script type="text/javascript" src="open.js" rel="script"></script>
+    <script src="slide.js" rel="script"></script>
+    <script src="js/jquery-3.3.1.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+    <!--<style>/*点击图片由暗变亮*/-->
+        <!--.bottomImg a:hover img{filter:alpha(Opacity=1);-moz-opacity:1;opacity: 1}-->
+    <!--.moon1 {filter:alpha(Opacity=1);-moz-opacity:0;opacity: 0}-->
+    <!--</style>-->
+</head>
+<body>
+
+<div class="logo">
+    <img width="20%" height="20%" src="img/logo.png">
+</div>
+
+    <div class="feb">
+        <a> F  E  B</a>
+    </div>
+
+    <div class="menu">
+        <p><a class="box" href="#home" style="text-decoration: none; color: crimson;" >·主页 | HOME</a></p>
+        <p><a class="intro" onclick="openShutManager(this,'box1',false)">·关于 | ABOUT</a></p>
+            <a class="box" id="box1" href="#introduction" style="display:none; color: red; text-decoration: none;">·贰月制包所</a>
+        <p><a class="customize" onclick="openShutManager(this,'box2',false)">·定制 | CUSTOMIZE</a></p>
+            <a class="box" id="box2" style="display:none; color: red; text-decoration: none;" href="#inquiry">·INQUIRE WITHIN</a>
+        <p><a class="customize" onclick="openShutManager(this,'box3',false)">·现在 | OFFER NOW</a></p>
+            <a class="box" id="box3" style="display:none; color: red; text-decoration: none;" href="#show">·版型 | STYLE</a>
+        <p><a class="customize" onclick="openShutManager(this,'box4',false)">·包馆 | GALLERY</a></p>
+             <a class="box" id="box4" style="display:none; color: red; text-decoration: none;" href="#past">过去 | PAST</a>
+        <p><a class="customize" onclick="openShutManager(this,'box5',false)">·其它 | OTHER</a></p>
+        <a class="box" id="box5" style="display:none; color: red; text-decoration: none;" href="#activity">·动态 | ACTIVITY</a>
+    </div>
+
+<!--以下是简介-->
+<div class="detail">
+        <div id="home">.</div>
+        <div id="introduction">
+             <p>
+                 人活着<br>需要找到一条与大世界相同的路径<br>也需要被路径里诞生的各种故事支撑<br>如果我们都闭上眼睛<br>捂住耳朵<br>屏住呼吸<br>不去触摸<br>那故事就无法开始<br>做一个开始<br>贰月制包所
+             </p>
+        </div>
+        <div id="inquiry">
+            <br>
+            <p>As a handcraft studio, we offer customizing service as a way for you to get the perfect handbags.</p>
+            <p>You can choose from the classic styles or <a style=" color: crimson; "href="mailto:rencoldice@gmail.com?subject=Inquiry Within There&body=Hello!">send me</a> your design to make the appointment.</p>
+            <p>You can also choose to make it yourself if you're in the same city.</p>
+            <p>For gifts, we prepared the delicate box and gift cards.</p>
+            <p>I'm waiting for you.</p>
+        </div>
+
+    <div id="past">
+            <a href="#"><img class="scale" src="img/_DSC4145.jpg"></a>
+
+            <a href="#"> <img class="scale" src="img/_DSC4226.JPG"></a>
+            <a href="#"> <img class="scale" src="img/_DSC4233.JPG"></a>
+            <a href="#"> <img class="scale" src="img/_DSC4235.JPG"></a>
+        <a href="#"> <img class="scale" src="img/_DSC4213.JPG"></a>
+            <a href="#"> <img class="scale" src="img/_DSC4236.JPG"></a>
+        <a href="#"> <img class="scale" src="img/_DSC4258.JPG"></a>
+            <a href="#"> <img class="scale" src="img/_DSC4240.JPG"></a>
+            <a href="#"> <img class="scale" src="img/_DSC4145.jpg"></a>
+            <a href="#"> <img class="scale" src="img/_DSC4248.JPG"></a>
+            <a href="#"> <img class="scale" src="img/_DSC4251.JPG"></a>
+            <a href="#"> <img class="scale" src="img/_DSC4258.JPG"></a>
+            <a href="#"> <img class="scale" src="img/_DSC4260.JPG"></a>
+    </div>
+
+    <div id="show">
+            <a href="#"> <img class="scale" src="img/small-orange.png"></a>
+            <a href="#"> <img class="scale" src="img/small-white.png"></a>
+            <a href="#"> <img class="scale" src="img/wallet-clip.png"></a>
+            <a href="#"> <img class="scale" src="img/notebook.png"></a>
+            <a href="#"><img class="scale" src="img/orange-bag.png"></a>
+            <a href="#"> <img class="scale" src="img/ren.png"></a>
+            <a href="#"> <img class="scale" src="img/white.png"></a>
+            <a href="#"> <img class="scale" src="img/embroider.png"></a>
+    </div>
+
+    <div id="activity">
+            <a><img class="scale2" src="img/IMG_2553.PNG"></a>
+            <a> <img class="scale2" src="img/IMG_3274.jpg"></a>
+            <a> <img class="scale2" src="img/IMG_3308.jpg"></a>
+            <a> <img class="scale2" src="img/IMG_9825%202.jpg"></a>
+    </div>
+</div>
+<script>
+    $('.box').on('click', function (e) {
+        e.preventDefault();
+        target = $(this).attr('href');
+        $('.detail > div').not(target).hide();
+        $(target).fadeIn(600);
+    });
+
+
+
+</script>
+</body>
+
+</html>
